@@ -12,6 +12,7 @@ body {
     color: var(--text-color);
     font-size: 1.6rem;
     font-family: Gordita, sans-serif;
+    background-color: var(--bg-color);
 }
 
 a {
@@ -36,4 +37,8 @@ select {
 .icon {
     -webkit-filter: var(--icon--color);
     filter: var(--icon--color);
+}
+
+.blank-text {
+    display: none;
 }

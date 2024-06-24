@@ -7,13 +7,31 @@
 
 .header {
     background-color: var(--header-bg-color);
-
-    @include abs.breakpoint(lg) {}
 }
 
 .top-bar {
     @extend %flexItemsCenter;
     padding: 30px 0;
+
+    @include abs.breakpoint(md) {
+        justify-content: space-between;
+        padding: 16px 0;
+    }
+
+    @include abs.breakpoint(lg) {
+        padding: 20px 0;
+    }
+
+    &__more {
+        display: none;
+        width: 24px;
+        height: 24px;
+        padding: 6px 4px;
+
+        @include abs.breakpoint(lg) {
+            display: block;
+        }
+    }
 }
 
 .navbar {
@@ -33,14 +51,26 @@
         font-weight: 500;
         line-height: 146.667%;
     }
+
+    @include abs.breakpoint(lg) {
+        display: none;
+    }
+
+    @include abs.breakpoint(xl) {
+        margin-left: 50px;
+    }
 }
 
 .top-act {
-    margin-left: auto;
     @extend %flexItemsCenter;
+    margin-left: auto;
     gap: 20px;
     min-width: 50px;
     height: 50px;
+
+    @include abs.breakpoint(md) {
+        margin-left: 0;
+    }
 
     &__group {
         display: flex;
@@ -48,6 +78,10 @@
         border-radius: 8px;
         background: var(--top-act-group-color);
         box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
+
+        @include abs.breakpoint(md) {
+            display: none;
+        }
     }
 
     &__btn {
@@ -63,6 +97,10 @@
 
     &__group--single &__btn {
         padding: 13px;
+
+        @include abs.breakpoint(lg) {
+            display: none;
+        }
     }
 
     &__title {
@@ -75,6 +113,10 @@
         width: 1px;
         height: 30px;
         background: #EDEDF6;
+
+        @include abs.breakpoint(md) {
+            display: none;
+        }
     }
 
     &__avatar {

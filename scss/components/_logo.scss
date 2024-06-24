@@ -1,11 +1,29 @@
+@use '../abstracts/index' as abs;
+
 .logo {
     display: flex;
     align-items: center;
     gap: 14px;
 
+    @include abs.breakpoint(lg) {
+        gap: 10px;
+        margin-left: 39px;
+    }
+
+    @include abs.breakpoint(md) {
+        gap: 10px;
+        margin-left: 0;
+    }
+
     &__title {
         font-size: 2.2rem;
         font-weight: 700;
         line-height: 145.455%
+    }
+
+    &__img {
+        @include abs.breakpoint(lg) {
+            width: 24px;
+        }
     }
 }
