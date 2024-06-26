@@ -2,13 +2,21 @@
 
 html {
     --text-color: #1A162E;
-    --header-bg-color: #EEE;
     --bg-color: #F6F6F6;
-    --top-act-group-color: #FFF;
-    --top-act-group-shadow: rgba(237, 237, 246, 0.20);
+
+    --header-bg-color: #EEE;
     --icon--color: brightness(0) saturate(100%) invert(5%) sepia(56%) saturate(2384%) hue-rotate(235deg) brightness(89%) contrast(91%);
 
-    @include abs.breakpoint(md) {
+    --top-act-group-color: #FFF;
+    --top-act-group-shadow: rgba(237, 237, 246, 0.20);
+
+    --dropdown-bg-color: #FFF;
+    --dropdown-shadow: rgba(200, 200, 200, 0.40);
+
+    --top-menu-border-color: #D2D1D6;
+
+    @include abs.breakpoint(lg) {
         --header-bg-color: #FFFFFF;
+        --header-shadow: rgba(237, 237, 246, 0.20);
     }
 }

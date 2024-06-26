@@ -1,8 +1,23 @@
+@use '../abstracts/index' as abs;
+
 html.dark {
     --text-color: #FFFFFF;
-    --header-bg-color: #171C28;
     --bg-color: #292E39;
+
+    --header-bg-color: #171C28;
+    --icon--color: brightness(0) saturate(100%) invert(100%) sepia(8%) saturate(0%) hue-rotate(93deg) brightness(106%) contrast(112%);
+
     --top-act-group-color: #292E39;
     --top-act-group-shadow: rgba(0, 0, 0, 0.20);
-    --icon--color: brightness(0) saturate(100%) invert(100%) sepia(8%) saturate(0%) hue-rotate(93deg) brightness(106%) contrast(112%);
+
+    --dropdown-bg-color: #2f3441;
+    --dropdown-shadow: rgba(23, 28, 40, 0.4);
+    --dropdown-arrow-color: brightness(0) saturate(100%) invert(17%) sepia(27%) saturate(487%) hue-rotate(185deg) brightness(89%) contrast(88%);
+
+    --top-menu-border-color: #171C28;
+    --top-menu-cate-1-2-color: brightness(0) saturate(100%) invert(92%) sepia(1%) saturate(2115%) hue-rotate(201deg) brightness(108%) contrast(97%);
+
+    @include abs.breakpoint(lg) {
+        --header-shadow: rgba(0, 0, 0, 0.20);
+    }
 }
